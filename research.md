@@ -87,7 +87,6 @@ _Compiled for personal website build. Sources: gimenablanco.com, GitHub (GimeVer
 |------|-------|
 | Years of experience | 10+ |
 | Major products shipped | 5+ |
-| Companies shaped | 4+ |
 | One obsession | Great craft |
 
 ---

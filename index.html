@@ -1,352 +1,627 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gimena Blanco — Senior Product Designer. 10 years crafting products that solve real problems across fintech, SaaS, and eCommerce." />
-  <meta name="theme-color" content="#FAF8F5" />
-  <meta property="og:title" content="Gimena Blanco — Senior Product Designer" />
-  <meta property="og:description" content="Systems thinker by habit. Artist at heart. 10 years shipping products people actually love." />
-  <meta property="og:type" content="website" />
-  <title>Gimena Blanco — Senior Product Designer</title>
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gimena Blanco — Senior Product Designer. 10 years crafting products people actually use, across fintech, SaaS, and eCommerce. Now learning to build them too."
+    />
+    <meta name="theme-color" content="#FAF8F5" />
+    <meta property="og:title" content="Gimena Blanco — Senior Product Designer" />
+    <meta
+      property="og:description"
+      content="Senior designer. Emerging builder. 10 years in, now learning to code it myself."
+    />
+    <meta property="og:type" content="website" />
+    <title>Gimena Blanco — Senior Product Designer</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <!-- Restore saved theme before first paint to prevent flash -->
+    <script>
+      (function () {
+        var t = localStorage.getItem("gb-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+    <!-- Google Fonts — all three themes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&family=Red+Hat+Display:wght@300..900&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- =============================================
-       NAV
-  ============================================= -->
-  <header>
-    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-      <a href="#hero" class="nav-logo" aria-label="Gimena Blanco — back to top">Gimena Blanco</a>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#hero" class="skip-link">Skip to main content</a>
+    <!-- NAV -->
+    <header>
+      <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <a href="#hero" class="nav-logo" aria-label="Gimena Blanco — back to top">
+          Gimena Blanco
+        </a>
 
-      <ul class="nav-links" role="list">
-        <li><a href="#work">work</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
+        <ul class="nav-links" role="list">
+          <li><a href="#work"     data-section="work">work</a></li>
+          <li><a href="#about"    data-section="about">about</a></li>
+          <li><a href="#code-lab" data-section="code-lab">code_lab</a></li>
+          <li><a href="#contact"  data-section="contact">contact</a></li>
+        </ul>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
+        <button class="theme-btn" id="theme-btn" aria-label="Switch theme">//light</button>
 
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-      <a href="#work" class="mobile-link">work</a>
-      <a href="#about" class="mobile-link">about</a>
-      <a href="#contact" class="mobile-link">contact</a>
-    </nav>
-  </header>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
 
-  <main>
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+      >
+        <a href="#work"     class="mobile-link">work</a>
+        <a href="#about"    class="mobile-link">about</a>
+        <a href="#code-lab" class="mobile-link">code_lab</a>
+        <a href="#contact"  class="mobile-link">contact</a>
+      </nav>
+    </header>
 
-    <!-- =============================================
-         HERO
-    ============================================= -->
-    <section id="hero" class="hero" aria-label="Introduction">
-      <span class="label hero-label">// PRODUCT_DESIGNER</span>
-      <h1 class="hero-title">
-        DESIGNING<br>
-        WITH <span class="accent">HEART</span><br>
-        AND LOGIC.
-      </h1>
-      <p class="hero-sub">
-        10 years crafting products that solve real problems —
-        for people who actually have to use them.
-      </p>
-      <div class="hero-ctas">
-        <a href="#work" class="btn btn-primary">view work</a>
-        <a href="#contact" class="btn btn-ghost">say hello</a>
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="hero" aria-label="Introduction">
+        <span class="label hero-label">// product_designer &rarr; builder</span>
+
+        <h1 class="hero-title">
+          <span class="hero-line1">DESIGNING PRODUCTS.</span>
+          <span class="hero-line2">LEARNING TO BUILD THEM TOO.</span>
+        </h1>
+
+        <p class="hero-tagline">Senior designer. Emerging builder.</p>
+
+        <div class="hero-ctas">
+          <a href="#work"     class="btn btn-primary">view_work</a>
+          <a href="#code-lab" class="btn btn-ghost">code_lab</a>
+        </div>
+      </section>
+
+      <!-- STATS BAR -->
+      <div class="stats" aria-label="Key numbers">
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <span class="stat-number">10+</span>
+            <span class="stat-card-label">years of experience</span>
+          </div>
+
+          <div class="stat-card highlight reveal">
+            <span class="stat-number">5+</span>
+            <span class="stat-card-label">products shipped</span>
+          </div>
+
+          <div class="stat-card reveal">
+            <span class="stat-number">4+</span>
+            <span class="stat-card-label">companies shaped</span>
+          </div>
+
+          <div class="stat-card reveal">
+            <span class="stat-number">1</span>
+            <span class="stat-card-label">obsession: great craft</span>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <!-- =============================================
-         TICKER
-    ============================================= -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>PRODUCT DESIGN &nbsp;·&nbsp; UX STRATEGY &nbsp;·&nbsp; DESIGN SYSTEMS &nbsp;·&nbsp; SERVICE DESIGN &nbsp;·&nbsp; ACCESSIBILITY &nbsp;·&nbsp; FINTECH &nbsp;·&nbsp; SAAS &nbsp;·&nbsp; ECOMMERCE &nbsp;·&nbsp; ATOMIC DESIGN &nbsp;·&nbsp; USER RESEARCH &nbsp;·&nbsp; PROTOTYPING &nbsp;·&nbsp; STAKEHOLDER ALIGNMENT &nbsp;·&nbsp; &nbsp;&nbsp;</span>
-        <span>PRODUCT DESIGN &nbsp;·&nbsp; UX STRATEGY &nbsp;·&nbsp; DESIGN SYSTEMS &nbsp;·&nbsp; SERVICE DESIGN &nbsp;·&nbsp; ACCESSIBILITY &nbsp;·&nbsp; FINTECH &nbsp;·&nbsp; SAAS &nbsp;·&nbsp; ECOMMERCE &nbsp;·&nbsp; ATOMIC DESIGN &nbsp;·&nbsp; USER RESEARCH &nbsp;·&nbsp; PROTOTYPING &nbsp;·&nbsp; STAKEHOLDER ALIGNMENT &nbsp;·&nbsp; &nbsp;&nbsp;</span>
-      </div>
-    </div>
-
-    <!-- =============================================
-         STATS
-    ============================================= -->
-    <div class="stats" aria-label="Key numbers">
-      <div class="stats-grid">
-
-        <div class="stat-card reveal">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">years of experience</span>
+      <!-- ABOUT -->
+      <section id="about" class="section about" aria-labelledby="about-heading">
+        <div class="section-head reveal">
+          <span class="label">// about_me</span>
         </div>
 
-        <div class="stat-card highlight reveal">
-          <span class="stat-number">5+</span>
-          <span class="stat-label">products shipped</span>
-        </div>
+        <div class="about-grid">
+          <div class="about-sticky reveal">
+            <h2 class="about-heading" id="about-heading">
+              FROM<br />DESIGN<br /><span class="accent"><span class="slash">/</span>&nbsp;TO CODE</span>
+            </h2>
+          </div>
 
-        <div class="stat-card reveal">
-          <span class="stat-number">4+</span>
-          <span class="stat-label">companies shaped</span>
-        </div>
+          <div class="about-body">
+            <p class="reveal">
+              I'm a product designer, I love problem solving. Ten years in, I
+              still get that buzz when a confusing flow suddenly clicks into place.
+            </p>
 
-        <div class="stat-card reveal">
-          <span class="stat-number">1</span>
-          <span class="stat-label">obsession: great craft</span>
-        </div>
+            <p class="reveal">
+              I've worked across fintech, SaaS, and eCommerce. The industries
+              shift; the work stays consistent: understand what people genuinely
+              need, then design something that serves them and makes sense for
+              the business.
+            </p>
 
-      </div>
-    </div>
+            <p class="reveal">
+              I've led design systems that went from 600 scattered code references
+              to one source of truth, shipped an award-winning pension risk tool
+              that made finance feel more human, and helped teams learn to trust
+              the process &mdash; <strong>not just the designer.</strong>
+            </p>
 
-    <!-- =============================================
-         ABOUT
-    ============================================= -->
-    <section id="about" class="section about" aria-labelledby="about-heading">
-      <div class="section-head reveal">
-        <span class="label">// ABOUT_ME</span>
-      </div>
+            <p class="reveal">
+              I started as a printmaker. Then I studied web development. I spent
+              a decade designing interfaces &mdash; and somewhere in there I
+              realised I wanted to build them too. So now I am.
+              <strong>Slowly, publicly, one repo at a time.</strong>
+            </p>
 
-      <div class="about-grid">
+            <div class="skills reveal">
+              <p class="skills-label">// skills</p>
 
-        <div class="about-sticky reveal">
-          <h2 class="about-headline" id="about-heading">
-            FROM FEELING<br>
-            LIKE A FRAUD<br>
-            TO SHIPPING<br>
-            THINGS<br>
-            PEOPLE LOVE.
-          </h2>
-        </div>
+              <div class="skill-row">
+                <span class="skill-name">Product Design</span>
+                <span class="badge badge-expert">EXPERT</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Design Systems</span>
+                <span class="badge badge-expert">EXPERT</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">UX Research &amp; Strategy</span>
+                <span class="badge badge-expert">EXPERT</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Service Design</span>
+                <span class="badge badge-expert">EXPERT</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Accessibility</span>
+                <span class="badge badge-expert">EXPERT</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Figma &amp; Prototyping</span>
+                <span class="badge badge-expert">EXPERT</span>
+              </div>
 
-        <div class="about-body">
-          <p class="reveal">
-            I'm a product designer who thinks in systems and
-            <strong>feels in paintings</strong>. Ten years in,
-            I still get that buzz when a confusing flow suddenly clicks
-            into place — and I genuinely don't think that's going away.
-          </p>
+              <hr class="skills-divider" />
 
-          <p class="reveal">
-            I've worked across fintech, SaaS, and eCommerce. The industries
-            change, the job stays the same: figure out what people actually
-            need, then make it <strong>undeniable</strong>. I've led design
-            systems that went from 600 scattered code references to one
-            source of truth overnight, shipped an award-winning pension risk
-            tool that made finance feel almost human, and helped teams
-            learn to trust the design process — not just the designer.
-          </p>
-
-          <p class="reveal">
-            My design philosophy is embarrassingly simple:
-            <strong>access first, ease second, aesthetics third.</strong>
-            But I'll be honest — that third part is where I can't help myself.
-          </p>
-
-          <div class="skills reveal">
-            <p class="skills-label">// SKILLS</p>
-
-            <div class="skill-row">
-              <span class="skill-name">Product Design</span>
-              <span class="badge badge-expert">EXPERT</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Design Systems</span>
-              <span class="badge badge-expert">EXPERT</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">UX Research &amp; Strategy</span>
-              <span class="badge badge-expert">EXPERT</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Service Design</span>
-              <span class="badge badge-expert">EXPERT</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Accessibility</span>
-              <span class="badge badge-expert">EXPERT</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Figma &amp; Prototyping</span>
-              <span class="badge badge-expert">EXPERT</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Frontend (HTML &amp; CSS)</span>
-              <span class="badge badge-learning">LEARNING</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Motion Design</span>
-              <span class="badge badge-learning">LEARNING</span>
+              <div class="skill-row">
+                <span class="skill-name">HTML &amp; CSS</span>
+                <span class="badge badge-learning">LEARNING</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">JavaScript</span>
+                <span class="badge badge-learning">LEARNING</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Motion Design</span>
+                <span class="badge badge-learning">LEARNING</span>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- SELECTED WORK -->
+      <section id="work" class="section work" aria-labelledby="work-heading">
+        <div class="section-head reveal">
+          <span class="label">// selected_work</span>
+          <h2 class="section-title" id="work-heading">SELECTED WORK</h2>
+        </div>
 
-    <!-- =============================================
-         SELECTED WORK
-    ============================================= -->
-    <section id="work" class="section work" aria-labelledby="work-heading">
-      <div class="section-head reveal">
-        <span class="label">// SELECTED_WORK</span>
-        <h2 class="section-title" id="work-heading">SELECTED WORK</h2>
-      </div>
+        <div class="work-grid" role="list">
 
-      <div class="work-grid" role="list">
+          <!-- Farm Timeline — featured full width -->
+          <article class="case-card reveal" role="listitem" aria-label="Case study: Farm Timeline">
+            <div class="case-img">
+              <div class="case-img-inner">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/5b2232cfaf20961fd245a3b4/e0caaad2-ed4d-478f-a5bc-9738ff2a4516/mockuuups-clean-desk-with-dell-display-mockup.jpeg"
+                  alt="Farm Timeline — product interface on desk display"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="case-content">
+              <span class="case-category">AgriTech &nbsp;&middot;&nbsp; SaaS &nbsp;&middot;&nbsp; Lead UX Designer</span>
+              <h3 class="case-title">Farm Timeline</h3>
+              <p class="case-desc">
+                Farmers were tracking ration changes and health events on paper &mdash;
+                calendars, notebooks, memory. It worked until it didn't. We built
+                a digital timeline that connected those events to real farm metrics,
+                so they could finally see what was working and what wasn't.
+                15+ user interviews. Field studies on US farms. Two rounds of
+                prototype testing with real data before anything shipped.
+              </p>
+              <div class="case-metrics" aria-label="Project outcomes">
+                <div class="case-metric">
+                  <span class="case-metric-number">80%</span>
+                  <span class="case-metric-label">adoption in 6 months</span>
+                </div>
+                <div class="case-metric">
+                  <span class="case-metric-number">30%</span>
+                  <span class="case-metric-label">free-to-paid conversion lift</span>
+                </div>
+                <div class="case-metric">
+                  <span class="case-metric-number">2&ndash;3 hrs</span>
+                  <span class="case-metric-label">saved per user, per week</span>
+                </div>
+              </div>
+              <blockquote class="case-quote">
+                &ldquo;I can't overstate the value of the Farm Timeline, it has been huge.&rdquo;
+                <cite>&mdash; Wyatt, Feed Advisor</cite>
+              </blockquote>
+              <div class="case-tags" aria-label="Skills used">
+                <span class="tag">UX Research</span>
+                <span class="tag">Data Visualisation</span>
+                <span class="tag">AgriTech</span>
+                <span class="tag">Mobile</span>
+                <span class="tag">Prototyping</span>
+              </div>
+              <a href="https://www.gimenablanco.com/farm-timeline" class="case-cta" target="_blank" rel="noopener noreferrer">read case study &rarr;</a>
+            </div>
+          </article>
 
-        <!-- Card 1: Lightspeed — featured, full width -->
-        <article class="case-card reveal" role="listitem" aria-label="Case study: Lightspeed Shipping">
-          <span class="case-category">eCommerce &nbsp;·&nbsp; SaaS &nbsp;·&nbsp; Lightspeed</span>
-          <h3 class="case-title">Lightspeed Shipping</h3>
-          <p class="case-desc">
-            An omnichannel shipping platform for eCommerce merchants — built to make
-            fulfillment fast, cost-effective, and actually bearable. End-to-end product
-            design across research, information architecture, flows, and final delivery.
-            The kind of work that lives in the unglamorous details.
-          </p>
-          <div class="case-tags" aria-label="Skills used">
-            <span class="tag">Product Design</span>
-            <span class="tag">UX Research</span>
-            <span class="tag">Prototyping</span>
-            <span class="tag">eCommerce</span>
-            <span class="tag">SaaS</span>
-          </div>
-        </article>
+          <!-- Label Editor -->
+          <article class="case-card reveal" role="listitem" aria-label="Case study: Label Editor">
+            <div class="case-img">
+              <div class="case-img-inner">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/5b2232cfaf20961fd245a3b4/af8f6b51-e2f2-48ff-ac53-1f57d4b14a57/labelEditor.png"
+                  alt="Label Editor — visual WYSIWYG label editing interface"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="case-content">
+              <span class="case-category">eCommerce &nbsp;&middot;&nbsp; Retail POS &nbsp;&middot;&nbsp; Product Designer</span>
+              <h3 class="case-title">Label Editor</h3>
+              <p class="case-desc">
+                Merchants were editing product labels through raw code. Half of
+                all support tickets were about label layouts. We built them a
+                visual WYSIWYG editor &mdash; live preview, drag-and-drop, no code required.
+              </p>
+              <div class="case-metrics" aria-label="Project outcomes">
+                <div class="case-metric">
+                  <span class="case-metric-number">50%</span>
+                  <span class="case-metric-label">fewer support tickets</span>
+                </div>
+              </div>
+              <blockquote class="case-quote">
+                &ldquo;Questions about label support now have a simple answer instead of lengthy explanations.&rdquo;
+                <cite>&mdash; Hudson, Escalation Team, Lightspeed</cite>
+              </blockquote>
+              <div class="case-tags" aria-label="Skills used">
+                <span class="tag">Product Design</span>
+                <span class="tag">Figma</span>
+                <span class="tag">eCommerce</span>
+                <span class="tag">Retail</span>
+              </div>
+              <a href="https://www.gimenablanco.com/label-editor" class="case-cta" target="_blank" rel="noopener noreferrer">read case study &rarr;</a>
+            </div>
+          </article>
 
-        <!-- Card 2: Zivver -->
-        <article class="case-card reveal" role="listitem" aria-label="Case study: SILK Design System">
-          <span class="case-category">Design Systems &nbsp;·&nbsp; Zivver</span>
-          <h3 class="case-title">SILK Design System</h3>
-          <p class="case-desc">
-            Led a full design system overhaul: 600+ scattered inline code references
-            unified into a single source of truth. Colour palette changes: from 6 hours
-            down to 2 minutes. Built for designers, developers, and the product in between.
-          </p>
-          <div class="case-tags">
-            <span class="tag">Design Systems</span>
-            <span class="tag">Strategy</span>
-            <span class="tag">Accessibility</span>
-          </div>
-        </article>
+          <!-- Scaling Up at Zivver -->
+          <article class="case-card reveal" role="listitem" aria-label="Case study: Scaling Up at Zivver">
+            <div class="case-img">
+              <div class="case-img-inner">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/5b2232cfaf20961fd245a3b4/1590590078007-IKNLFH81NRQIBP2UFRSA/IMG_1874.jpg"
+                  alt="Scaling Up at Zivver — journey mapping workshop"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="case-content">
+              <span class="case-category">Design Systems &nbsp;&middot;&nbsp; Scale-up &nbsp;&middot;&nbsp; Senior UX Designer</span>
+              <h3 class="case-title">Scaling Up at Zivver</h3>
+              <p class="case-desc">
+                Zivver was scaling fast &mdash; no shared design language, no research
+                budget, no process. I came in to build the foundation: user research
+                practices, journey maps, alignment personas, and the SILK design
+                system. Not just components &mdash; the culture around them.
+              </p>
+              <div class="case-metrics" aria-label="Project outcomes">
+                <div class="case-metric">
+                  <span class="case-metric-number">600+</span>
+                  <span class="case-metric-label">references &rarr; 1 source of truth</span>
+                </div>
+                <div class="case-metric">
+                  <span class="case-metric-number">6 hrs &rarr; 2 min</span>
+                  <span class="case-metric-label">colour change time</span>
+                </div>
+              </div>
+              <div class="case-tags" aria-label="Skills used">
+                <span class="tag">Design Systems</span>
+                <span class="tag">Accessibility</span>
+                <span class="tag">Strategy</span>
+                <span class="tag">Scale-up</span>
+              </div>
+              <a href="https://www.gimenablanco.com/scaling-up-at-zivver" class="case-cta" target="_blank" rel="noopener noreferrer">read case study &rarr;</a>
+            </div>
+          </article>
 
-        <!-- Card 3: Aegon -->
-        <article class="case-card reveal" role="listitem" aria-label="Case study: Aegon Risk Assessment">
-          <span class="case-category">Fintech &nbsp;·&nbsp; Aegon</span>
-          <h3 class="case-title">Aegon Risk Assessment</h3>
-          <p class="case-desc">
-            An award-winning pension risk calculator that made one of the most dreaded
-            financial decisions feel almost... okay. Almost. Research-driven, empathy-first,
-            and built on atomic design principles with a new pattern library from the ground up.
-          </p>
-          <div class="case-tags">
-            <span class="tag">UX Research</span>
-            <span class="tag">Fintech</span>
-            <span class="tag">Service Design</span>
-            <span class="tag">Award-Winning</span>
-          </div>
-        </article>
+        </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- CODE LAB -->
+      <section id="code-lab" class="section code-lab" aria-labelledby="lab-heading">
+        <div class="section-head reveal">
+          <span class="label">// code_lab</span>
+          <h2 class="section-title" id="lab-heading">CODE LAB</h2>
+        </div>
 
-    <!-- =============================================
-         CONTACT
-    ============================================= -->
-    <section id="contact" class="section contact" aria-labelledby="contact-heading">
-      <div class="reveal">
-        <span class="label">// GET_IN_TOUCH</span>
-        <h2 class="contact-headline" id="contact-heading">
-          LET'S MAKE<br>
-          <span class="accent">SOMETHING</span><br>
-          REAL.
-        </h2>
-        <p class="contact-sub">
-          No pitch decks required.<br>
-          Just good work and honest conversation.
+        <p class="code-lab-intro reveal">
+          This is where the learning happens in public. Every project here
+          is a Frontend Mentor challenge or a self-directed build &mdash; HTML,
+          CSS, a bit of JavaScript. Not production. Not polished.
+          Just a designer figuring out how the thing actually works.
         </p>
-        <div class="contact-ctas">
-          <a href="mailto:hello@gimenablanco.com" class="btn btn-primary">say hello</a>
-          <a href="https://linkedin.com/in/gimenablanco" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">linkedin</a>
+
+        <div class="lab-grid">
+
+          <article class="lab-card reveal" aria-label="Project: meet-landing">
+            <div class="lab-chrome">
+              <div class="lab-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="lab-url">github.com/GimeVerdant/meet-landing</span>
+              <span class="lab-status status-live">LIVE</span>
+            </div>
+            <div class="lab-body">
+              <h3 class="lab-title">meet-landing</h3>
+              <p class="lab-desc">Landing page layout challenge. Responsive grid, custom typography pairing, component structure from scratch.</p>
+              <div class="lab-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <a href="https://github.com/GimeVerdant/meet-landing" class="lab-cta" target="_blank" rel="noopener noreferrer">view on github &rarr;</a>
+            </div>
+          </article>
+
+          <article class="lab-card reveal" aria-label="Project: newsletter-signup">
+            <div class="lab-chrome">
+              <div class="lab-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="lab-url">github.com/GimeVerdant/newsletter_signup</span>
+              <span class="lab-status status-live">LIVE</span>
+            </div>
+            <div class="lab-body">
+              <h3 class="lab-title">newsletter-signup</h3>
+              <p class="lab-desc">Sign-up form with active validation states. Focus on error handling and accessible form patterns.</p>
+              <div class="lab-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <a href="https://github.com/GimeVerdant/newsletter_signup" class="lab-cta" target="_blank" rel="noopener noreferrer">view on github &rarr;</a>
+            </div>
+          </article>
+
+          <article class="lab-card reveal" aria-label="Project: article-preview">
+            <div class="lab-chrome">
+              <div class="lab-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="lab-url">github.com/GimeVerdant/article-preview-component</span>
+              <span class="lab-status status-live">LIVE</span>
+            </div>
+            <div class="lab-body">
+              <h3 class="lab-title">article-preview</h3>
+              <p class="lab-desc">Interactive component with a JS-powered share toggle. First project with meaningful JavaScript behaviour.</p>
+              <div class="lab-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+              <a href="https://github.com/GimeVerdant/article-preview-component" class="lab-cta" target="_blank" rel="noopener noreferrer">view on github &rarr;</a>
+            </div>
+          </article>
+
+          <article class="lab-card reveal" aria-label="Project: blog-preview-card">
+            <div class="lab-chrome">
+              <div class="lab-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="lab-url">github.com/GimeVerdant/blog_preview_card</span>
+              <span class="lab-status status-live">LIVE</span>
+            </div>
+            <div class="lab-body">
+              <h3 class="lab-title">blog-preview-card</h3>
+              <p class="lab-desc">Card component focused on typography hierarchy, spacing rhythm, and design-to-code translation from Figma.</p>
+              <div class="lab-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <a href="https://github.com/GimeVerdant/blog_preview_card" class="lab-cta" target="_blank" rel="noopener noreferrer">view on github &rarr;</a>
+            </div>
+          </article>
+
+          <article class="lab-card reveal" aria-label="Project: testimonials">
+            <div class="lab-chrome">
+              <div class="lab-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="lab-url">github.com/GimeVerdant/testimonials</span>
+              <span class="lab-status status-live">LIVE</span>
+            </div>
+            <div class="lab-body">
+              <h3 class="lab-title">testimonials</h3>
+              <p class="lab-desc">Masonry-style testimonial grid. Practising CSS Grid, asymmetric layouts, and responsive behaviour.</p>
+              <div class="lab-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <a href="https://github.com/GimeVerdant/testimonials" class="lab-cta" target="_blank" rel="noopener noreferrer">view on github &rarr;</a>
+            </div>
+          </article>
+
+          <article class="lab-card reveal" aria-label="Project: product-preview-card">
+            <div class="lab-chrome">
+              <div class="lab-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="lab-url">github.com/GimeVerdant/product-preview-card</span>
+              <span class="lab-status status-live">LIVE</span>
+            </div>
+            <div class="lab-body">
+              <h3 class="lab-title">product-preview-card</h3>
+              <p class="lab-desc">Responsive product card with image swap at breakpoint. Focused on art direction and layout precision.</p>
+              <div class="lab-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <a href="https://github.com/GimeVerdant/product-preview-card" class="lab-cta" target="_blank" rel="noopener noreferrer">view on github &rarr;</a>
+            </div>
+          </article>
+
         </div>
-      </div>
-    </section>
 
-  </main>
+        <div class="lab-footer reveal">
+          <a href="https://github.com/GimeVerdant" target="_blank" rel="noopener noreferrer">
+            see everything I'm building &rarr;
+          </a>
+        </div>
+      </section>
 
-  <!-- =============================================
-       FOOTER
-  ============================================= -->
-  <footer class="footer" role="contentinfo">
-    <span class="footer-copy">© Gimena Blanco 2025</span>
-    <nav class="footer-links" aria-label="Social links">
-      <a href="https://linkedin.com/in/gimenablanco" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://www.gimenablanco.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
-      <a href="mailto:hello@gimenablanco.com">Email</a>
-    </nav>
-  </footer>
+      <!-- CONTACT -->
+      <section id="contact" class="section contact" aria-labelledby="contact-heading">
+        <div class="reveal">
+          <span class="label">// get_in_touch</span>
+          <h2 class="contact-headline" id="contact-heading">
+            LET'S BUILD<br />
+            <span class="accent">SOMETHING</span><br />
+            REAL.
+          </h2>
+          <p class="contact-sub">
+            No pitch decks required.<br />
+            Just good work and honest conversation.
+          </p>
+          <div class="contact-ctas">
+            <a href="mailto:hello@gimenablanco.com" class="btn btn-primary">say_hello</a>
+            <a href="https://github.com/GimeVerdant" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">github</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- =============================================
-       SCRIPTS
-  ============================================= -->
-  <script>
-    // ---- Nav scroll effect ----
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <span class="footer-name">Gimena Blanco</span>
+      <span class="footer-year">&copy; 2026</span>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="https://linkedin.com/in/gimenablanco" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/GimeVerdant"       target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.gimenablanco.com"          target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="mailto:hello@gimenablanco.com">Email</a>
+      </nav>
+    </footer>
 
-    // ---- Mobile menu toggle ----
-    const toggle = document.getElementById('nav-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+    <!-- SCRIPTS -->
+    <script>
+      // Nav scroll border
+      var nav = document.getElementById("nav");
+      window.addEventListener("scroll", function () {
+        nav.classList.toggle("scrolled", window.scrollY > 40);
+      }, { passive: true });
 
-    toggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      toggle.classList.toggle('open', isOpen);
-      toggle.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
+      // Mobile menu toggle
+      var navToggle  = document.getElementById("nav-toggle");
+      var mobileMenu = document.getElementById("mobile-menu");
 
-    // Close mobile menu on link click
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+      navToggle.addEventListener("click", function () {
+        var isOpen = mobileMenu.classList.toggle("open");
+        navToggle.classList.toggle("open", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileMenu.setAttribute("aria-hidden",  String(!isOpen));
+        document.body.style.overflow = isOpen ? "hidden" : "";
       });
-    });
 
-    // ---- Scroll reveal animations ----
-    // Stagger sibling .reveal elements within the same section
-    document.querySelectorAll('section, .stats, .about-grid, .about-body, .work-grid').forEach(parent => {
-      parent.querySelectorAll(':scope > .reveal').forEach((el, i) => {
-        el.style.transitionDelay = `${i * 0.08}s`;
+      document.querySelectorAll(".mobile-link").forEach(function (link) {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("open");
+          navToggle.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+          mobileMenu.setAttribute("aria-hidden",  "true");
+          document.body.style.overflow = "";
+        });
       });
-    });
 
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
+      // Theme toggle
+      var themeBtn = document.getElementById("theme-btn");
+      var themes   = ["light", "blue", "dark"];
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("gb-theme", theme);
+        themeBtn.textContent = "//" + theme;
+        var colors = { light: "#FAF8F5", blue: "#6565F0", dark: "#0D0D0D" };
+        document.querySelector('meta[name="theme-color"]')
+          .setAttribute("content", colors[theme]);
+      }
+
+      themeBtn.addEventListener("click", function () {
+        var current = document.documentElement.getAttribute("data-theme") || "light";
+        var next    = themes[(themes.indexOf(current) + 1) % themes.length];
+        applyTheme(next);
       });
-    }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -48px 0px'
-    });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-  </script>
+      applyTheme(document.documentElement.getAttribute("data-theme") || "light");
 
-</body>
+      // Active nav link on scroll
+      var navLinks = document.querySelectorAll(".nav-links a[data-section]");
+      var sections = document.querySelectorAll("#hero, #about, #work, #code-lab, #contact");
+
+      var sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.id;
+          navLinks.forEach(function (link) {
+            link.classList.toggle("active", link.getAttribute("data-section") === id);
+          });
+        });
+      }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+
+      sections.forEach(function (s) { sectionObserver.observe(s); });
+
+      // Scroll reveal with sibling stagger
+      document.querySelectorAll(".stats-grid, .about-grid, .about-body, .work-grid, .lab-grid")
+        .forEach(function (parent) {
+          parent.querySelectorAll(":scope > .reveal").forEach(function (el, i) {
+            el.style.transitionDelay = (i * 0.08) + "s";
+          });
+        });
+
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.07, rootMargin: "0px 0px -48px 0px" });
+
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        revealObserver.observe(el);
+      });
+    </script>
+  </body>
 </html>
